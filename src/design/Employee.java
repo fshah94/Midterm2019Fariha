@@ -23,4 +23,15 @@ public interface Employee {
 	//employee benefit
 	public void benefitLayout();
 
+
+	//how many sick days Employee gets
+	public void sickDays ();
+
+	//how many paid Vacation days employee gets
+	public void paidVacation();
+
+
+
+
+
 }
