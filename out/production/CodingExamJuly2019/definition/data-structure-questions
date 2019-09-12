@@ -1,7 +1,9 @@
 Please answer the below Data Structure Questions:
 
 why do we need data structure?
-A.
+A.  A data structure is an arrangement of data in a computer’s memory. Data structures include
+  arrays, linked lists, stacks, binary trees,hash tables, etc. Algorithms manipulate the data in the
+  structures in various ways, such as searching for a data item and sorting the data. Using correct
 
 
 What are the various operations that can be performed on different Data Structures?

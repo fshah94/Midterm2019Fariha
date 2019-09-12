@@ -21,7 +21,7 @@ public class CnnAPI {
 		"author": null,
 		"title": "Who is affected by a shutdown? - CNN Video",
 		"description": "CNN's Tom Foreman breaks down who is affected by a federal government partial shutdown.",
-		"url": "http://us.cnn.com/videos/politics/2018/12/22/federal-partial-shutdown-by-the-numbers-foreman-ctn-vpx.cnn",
+		"url": http"://us.cnn.com/videos/politics/2018/12/22/federal-partial-shutdown-by-the-numbers-foreman-ctn-vpx.cnn",
 		"urlToImage": "https://cdn.cnn.com/cnnnext/dam/assets/181202171029-government-shutdown-capitol-file-super-tease.jpg",
 		"publishedAt": "2018-12-23T01:09:50.8583193Z",
 		"content": "Chat with us in Facebook Messenger. Find out what's happening in the world as it unfolds."

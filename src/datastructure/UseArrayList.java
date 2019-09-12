@@ -20,7 +20,7 @@ public class UseArrayList {
 		 array.add("Rafid");
 		 array.add("Yazan");
 		 array.add("Zayan");
-	//	System.out.println("Household kids: " + array);
+		System.out.println("Household kids: " + array);
 
 
 		//To get from array

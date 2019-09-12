@@ -1,5 +1,7 @@
 package codelab.status;
 
+import parser.Student;
+
 public class Trainee implements Comparable<Trainee> {
 
     private String firstName;
@@ -8,11 +10,23 @@ public class Trainee implements Comparable<Trainee> {
 
     public Trainee(){}
 
+    public Trainee(int numberOfExercisesSolved) {
+        this.numberOfExercisesSolved = numberOfExercisesSolved;
+    }
+
     public Trainee(String firstName, String lastName, int numberOfExercisesSolved) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.numberOfExercisesSolved = numberOfExercisesSolved;
+
+
+
+
     }
+
+
+
+
 
     public String getFirstName() {
         return firstName;
@@ -42,4 +56,6 @@ public class Trainee implements Comparable<Trainee> {
         return trainee.getNumberOfExercisesSolved() - this.getNumberOfExercisesSolved();
     }
 
-}
+
+    }
+

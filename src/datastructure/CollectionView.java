@@ -18,8 +18,15 @@ public static void main(String[] args) {
         map.put(5, "San Jose");
         map.put(6, "Seattle");
 
+
+
+        // Collection view
+        System.out.println(map.values());
+
+
+        //To Iterate using for each loop
         for (HashMap.Entry<Integer, String> entry : map.entrySet()){
-                System.out.println(entry);
+                System.out.println(entry.getKey() + " " + entry.getValue());
 
         }
 
