@@ -31,32 +31,19 @@ public class UseArrayList {
 		array.remove("Zayan");
 		System.out.println("with remove: " + array);
 
-
-		// using Iterator
-
-		// WHile Loop
-
-
+		// While Loop
 		Iterator it = array.iterator();
 		while(it.hasNext()){
 			System.out.println(it.next());
 		}
 
-		// for each loop
+		// Iterate with for each loop
 
 		Iterator i = array.iterator();
 		while(it.hasNext()){
 			Object o = it.next();
 			System.out.println(o);
 		}
-
-
-
-
-
-
-
-
 
 
 
