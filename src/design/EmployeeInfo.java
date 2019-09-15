@@ -141,7 +141,7 @@ public abstract class EmployeeInfo implements Employee {
 	 * Hints: pension will be 5% of the salary for 1 year, 10% for 2 years with the company and so on.
 	 *
 	 */
-	public static double calculateEmployeePension(double salary, int yearsWithCompany) {
+	public static double calculateEmployeePension(double salary) {
 
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Please enter start date in format (example: May,2015): ");
@@ -150,6 +150,15 @@ public abstract class EmployeeInfo implements Employee {
 		String todaysDate = sc.nextLine();
 		String convertedJoiningDate = DateConversion.convertDate(joiningDate);
 		String convertedTodaysDate = DateConversion.convertDate(todaysDate);
+
+		System.out.println(convertedJoiningDate);
+		System.out.println(convertedTodaysDate);
+
+		int joinYear = Integer.parseInt(convertedJoiningDate.split("/")[1].trim());
+		int currentYear =Integer.parseInt(convertedTodaysDate.split("/")[1].trim());
+		int yearsWithCompany = currentYear-joinYear;
+
+
 
 
 		//implement numbers of year from above two dates
@@ -216,22 +225,22 @@ public abstract class EmployeeInfo implements Employee {
 						date = 6;
 						break;
 					case July:
-						date = 1;
+						date = 7;
 						break;
 					case August:
-						date = 1;
+						date = 8;
 						break;
 					case September:
-						date = 1;
+						date = 9;
 						break;
 					case October:
-						date = 1;
+						date = 10;
 						break;
 					case November:
-						date = 1;
+						date = 11;
 						break;
 					case December:
-						date = 1;
+						date = 12;
 						break;
 					default:
 						date = 0;

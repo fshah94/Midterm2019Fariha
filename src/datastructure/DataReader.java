@@ -2,6 +2,7 @@ package datastructure;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
+import java.util.*;
 
 public class DataReader {
 
@@ -30,16 +31,48 @@ public class DataReader {
 
 			fr = new FileReader(theFile);
 			br = new BufferedReader(fr);
+			LinkedList<String> linkedListOfWords = new LinkedList<>();
+			Stack<String> stackListOfWords = new Stack<>();
+
+
 
 			String data ="";
 			while ((data = br.readLine()) != null) {
 				System.out.println(data);
+				//to get rid of space
+				String [] words = data.split(" ");
+				for (String word : words) {
+
+					linkedListOfWords.add(word);
+					stackListOfWords.push(word);
+
+				}
+
 
 			}
+			//Prints every word
+			System.out.println("************FILO");
+			ListIterator<String> it2 = stackListOfWords.listIterator(stackListOfWords.size());
+			while (it2.hasPrevious()){
+				System.out.println(it2.previous());
+			}
+
+
+
+			System.out.println("*************************FIFO: ");
+			Iterator it =linkedListOfWords.iterator();
+			while (it.hasNext()){
+				System.out.println(it.next());
+
+			}
+
+
 		}  catch (Exception e) {
 			e.printStackTrace();
 
 
+
+		}
 
 		}
 
@@ -51,4 +84,3 @@ public class DataReader {
 
 	}
 
-}
