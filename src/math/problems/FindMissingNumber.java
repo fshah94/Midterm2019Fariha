@@ -19,7 +19,7 @@ public class FindMissingNumber {
         for (int i = 0; i < array.length; i++) {
             sum = sum + array[i];
         }
-            System.out.println(sum);
+          //  System.out.println(sum);
 
         //Sum1 gives us sum of value of array with the missing number
 
@@ -28,7 +28,7 @@ public class FindMissingNumber {
             sum1 = sum1 + j;
         }
 
-        System.out.println(sum1);
+     //   System.out.println(sum1);
 
         // sum1-sum gives you missing number.
 

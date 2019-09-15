@@ -3,22 +3,25 @@ package math.problems;
 public class PrimeNumber {
 	public static void main(String[] args) {
 
-		String primeNum = "";
-		for(int i=2; i<=1000000; i++) {
-			int count = 0;
-			for(int j=i; j>=1; j--){
-				if(i%j==0){
-					count = count + 1;
+		String primenum="";
+
+		for(int i=2;i<=1000000; i++){
+
+			int count =0;
+			for (int j=i;j>=1;j--){
+				if (i%j==0){
+					count=count+1;
 				}
 			}
-			if (count==0){
-				primeNum=primeNum + i + " ";
-			}
+			if (count==2){
+				primenum = primenum + i + " ";
 
 			}
-		System.out.println("Prime numbers are: " + primeNum);
-
 		}
+		System.out.println("Prime Numbers for 2 to 1000 are : "+primenum);
+
+	}
+
 }
 
 

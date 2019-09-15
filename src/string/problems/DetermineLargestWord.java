@@ -11,16 +11,28 @@ public class DetermineLargestWord {
          Should return "10 biological".
          */
         String s="Human brain is a biological learning machine";
-        Map<Integer, String> wordNLength = findTheLargestWord(s);
+        Map<Integer, String> wordNLength = getTheLargestWord(s);
+
         //implement
 
+        for (Map.Entry entry : wordNLength.entrySet())
+            System.out.println(entry.getKey() + " " + entry.getValue());
     }
 
-    public static Map<Integer, String> findTheLargestWord(String wordGiven){
+    public static Map<Integer, String> getTheLargestWord(String word){
         Map<Integer, String> map = new HashMap<Integer, String>();
-        String st = "";
+        String[] s = word.split(" ");
+
         //implement
 
+        String largestWord = "";
+        for (int i =0; i < s.length; i++) {
+            if (s[i].length() > largestWord.length())
+                largestWord = s[i];
+        }
+        System.out.println("Size of largest word and the word: ");
+        map.put(largestWord.length(), largestWord);
         return map;
     }
 }
+

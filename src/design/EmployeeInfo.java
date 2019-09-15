@@ -1,5 +1,7 @@
 package design;
 
+import org.testng.annotations.Test;
+
 import java.util.Scanner;
 
 public abstract class EmployeeInfo implements Employee {
@@ -141,6 +143,7 @@ public abstract class EmployeeInfo implements Employee {
 	 * Hints: pension will be 5% of the salary for 1 year, 10% for 2 years with the company and so on.
 	 *
 	 */
+
 	public static double calculateEmployeePension(double salary) {
 
 		Scanner sc = new Scanner(System.in);

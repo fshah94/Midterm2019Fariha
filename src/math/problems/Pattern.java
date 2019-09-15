@@ -1,6 +1,26 @@
 package math.problems;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Pattern {
+
+
+	public static List<Integer> numPattern(int n) {
+		int count = 1;
+		List<Integer> numList = new ArrayList<>();
+		numList.add(n);
+		for (int i = 0; i < 10; i++) {
+			for (int j = 0; j < 10; j++) {
+				n = n - count;
+				if (n < 0)
+					break;
+				numList.add(n);
+			}
+			count++;
+		}
+		return numList;
+	}
 
 	public static void main(String[] args) {
 		/* Read this numbers, find the pattern then implement the logic from this pattern.which will give you this output.
@@ -8,10 +28,13 @@ public class Pattern {
 		 *
 		 *
 		 */
-
-
-		
-
-
+		List<Integer> list =  numPattern(100);
+		for (Integer p : list) {
+			System.out.print(p + " ");
+		}
 	}
 }
+
+
+
+
