@@ -41,7 +41,7 @@ public class CsvReader {
         }
         Collections.sort(roster);
 
-        int total=0;
+        double total=0;
         int numOfStudents=0;
 
 
@@ -74,6 +74,8 @@ public class CsvReader {
 
 
         }
+
+        System.out.println();
         double avgScore=total/numOfStudents;
         System.out.println("Avg class score: " + avgScore);
 
