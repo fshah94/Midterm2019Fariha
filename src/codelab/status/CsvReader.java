@@ -40,6 +40,11 @@ public class CsvReader {
             e.printStackTrace();
         }
         Collections.sort(roster);
+
+        int total=0;
+        int numOfStudents=0;
+
+
         for (Trainee student : roster) {
             if (student.getNumberOfExercisesSolved() >= 600) {
                 System.out.print("You did pretty good-->                    ");
@@ -64,14 +69,13 @@ public class CsvReader {
                 System.out.println(student.getFirstName() + " " + student.getLastName() + " " + student.getNumberOfExercisesSolved());
             }
 
-            
-
-
-
+            total= total+student.getNumberOfExercisesSolved();
+            numOfStudents ++;
 
 
         }
-
+        double avgScore=total/numOfStudents;
+        System.out.println("Avg class score: " + avgScore);
 
 
 

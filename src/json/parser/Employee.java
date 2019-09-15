@@ -1,6 +1,6 @@
 package json.parser;
 
-public class Employee {
+public class    Employee {
 
     private String empEmail;
     private String empName;

@@ -22,7 +22,7 @@ public class Numbers {
 
 	public static void main(String[] args) throws Exception {
 		
-		int [] num = new int[10000];
+		int [] num = new int[1000];
 		storeRandomNumbers(num);
 //		ConnectToSqlDB connectToSqlDB = new ConnectToSqlDB();
 
@@ -50,17 +50,17 @@ public class Numbers {
 		randomize (num, i);
 //		By following above, Continue for rest of the Sorting Algorithm....
 
-//		//Bubble Sort
-//		algo.bubbleSort(num);
-//		long bubbleSortExecutionTime = algo.executionTime;
-//		System.out.println("Total Execution Time of " + num.length + " numbers in Bubble Sort take: " + bubbleSortExecutionTime + " milli sec");
-////		connectToSqlDB.insertDataFromArrayToSqlTable(num, "bubble_sort", "SortingNumbers");
-////		List<String> bubbleSortNumbers = connectToSqlDB.readDataBase("bubble_sort", "SortingNumbers");
-////		printValue(bubbleSortNumbers);
-//		int b = num.length;
-//		randomize (num, b);
+		//Bubble Sort
+		algo.bubbleSort(num);
+		long bubbleSortExecutionTime = algo.executionTime;
+		System.out.println("Total Execution Time of " + num.length + " numbers in Bubble Sort take: " + bubbleSortExecutionTime + " milli sec");
+//		connectToSqlDB.insertDataFromArrayToSqlTable(num, "bubble_sort", "SortingNumbers");
+//		List<String> bubbleSortNumbers = connectToSqlDB.readDataBase("bubble_sort", "SortingNumbers");
+//		printValue(bubbleSortNumbers);
+		int b = num.length;
+		randomize (num, b);
 
-		//Merge Sort
+//		//Merge Sort
 //		algo.mergeSort(num);
 //		long mergeSortExecutionTime = algo.executionTime;
 //		System.out.println("Total Execution Time of " + num.length + " numbers in Merge Sort take: " + mergeSortExecutionTime + " milli sec");
@@ -71,7 +71,7 @@ public class Numbers {
 //		randomize (num, m);
 //
 //		//Quick Sort
-//		algo.quickSort();
+//		algo.quickSort(num);
 //		long quickSortExecutionTime = algo.executionTime;
 //		System.out.println("Total Execution Time of " + num.length + " numbers in quick Sort take: " + quickSortExecutionTime + " milli sec");
 ////		connectToSqlDB.insertDataFromArrayToSqlTable(num, "quick_sort", "SortingNumbers");
@@ -79,7 +79,7 @@ public class Numbers {
 ////		printValue(quickSortNumbers);
 //		int q = num.length;
 //		randomize (num, q);
-//
+
 //		//Heap Sort
 //		algo.heapSort(num);
 //		long heapSortExecutionTime = algo.executionTime;

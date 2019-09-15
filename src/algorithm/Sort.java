@@ -31,7 +31,6 @@ public class Sort {
         return list;
     }
 
-
     public int[] insertionSort(int[] array) {
         final long startTime = System.currentTimeMillis();
         int[] list = array;
@@ -81,6 +80,7 @@ public class Sort {
 
 
 
+
     public int [] mergeSort(int [] array, int size){
         final long startTime = System.currentTimeMillis();
         int[] list = array;
@@ -123,34 +123,14 @@ public class Sort {
     }
     
 
+
     public int [] quickSort(int [] array, int low, int high) {
         final long startTime = System.currentTimeMillis();
         int[] list = array;
         //implement here
-        if(low < high){
-            int next = partition(array, low, high);
-            quickSort(array, low, next-1);
-            quickSort(array, next+1, high);
-        }
-        final long endTime = System.currentTimeMillis();
-        final long executionTime = endTime - startTime;
-        this.executionTime = executionTime;
+
+
         return list;
-    }
-    public int partition(int array[], int p, int r){
-        int part = p-1;
-        int pivot = array[r];
-        for(int i=p; i <= r; i++){
-            if(array[i] <= pivot){
-                part++;
-                if(part != i){
-                    array[part] = array[part] ^ array[i];
-                    array[i] = array[part] ^ array[i];
-                    array[part] = array[part] ^ array[i];
-                }
-            }
-        }
-        return part;
     }
 
 
@@ -180,11 +160,30 @@ public class Sort {
         final long startTime = System.currentTimeMillis();
         int [] list = array;
         //implement here
-        
-        
-
+        int inner, outer;
+        int temp;
+        int h = 1;
+        while(h <= array.length/3)
+            h = h*3 + 1;
+        while(h>0)
+        {
+            for(outer=h; outer<array.length; outer++)
+            {
+                temp = list[outer];
+                inner = outer;
+                while(inner > h-1 && list[inner-h] >= temp)
+                {
+                    list[inner] = list[inner-h];
+                    inner -= h;
+                }
+                list[inner] = temp;
+            }
+            h = (h-1) / 3;
+        }
         return list;
     }
+        
+
 
     public static void printSortedArray(int [] array){
         for(int i=0; i<array.length; i++){
